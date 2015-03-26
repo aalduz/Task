@@ -10,14 +10,14 @@
 	                    <a href="/">Sites</a>
 	            </li>
 	            <li class="active" role="presentation" >
-	                    <a href="/summary">Summary</a>
+	                    <a href="{% url 'apptask.views.summary' %}">Summary</a>
 	            </li>
 	        </ul>
 	      </div><!--/.nav-collapse -->
 	</nav>
 	<div class="container"><h1>Summary</h1>		
-    	<a href="/summary"><button type="button" class="btn btn-primary">Sum</button></a>
-  		<a href="/summary-average"><button type="button" class="btn btn-primary active">Average</button></a>
+    	<a href="{% url 'apptask.views.summary' %}"><button type="button" class="btn btn-primary">Sum</button></a>
+  		<a href="{% url 'apptask.views.summary_average' %}"><button type="button" class="btn btn-primary active">Average</button></a>
 	    <table class="table">
 	    	<thead><tr><th>Site</th><th>A Value</th><th>B Value</th></tr></thead>
 		   	{% for avg in average %}
