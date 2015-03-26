@@ -1,0 +1,25 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+             <!-- Static navbar -->
+	<nav class="navbar navbar-default">
+	      <div id="navbar" class="navbar-collapse collapse">
+	        <ul class="nav navbar-nav">
+	            <li class="active" role="presentation" >
+	                    <a href="/">Sites</a>
+	            </li>
+	            <li role="presentation" >
+	                    <a href="/summary">Summary</a>
+	            </li>
+	        </ul>
+	      </div><!--/.nav-collapse -->
+	</nav>
+    <div class="container"><h1>Sites</h1>				
+			  <ul class="list-group">
+			    {% for site in sites %}
+					<li class="list-group-item"><a href="{% url 'apptask.views.site_detail' pk=site.pk %}">{{ site.site_name }}</a></li>
+		        {% endfor %}
+			 </ul>
+	</div>
+{% endblock content %}
+

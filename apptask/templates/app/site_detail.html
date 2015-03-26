@@ -1,0 +1,26 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+             <!-- Static navbar -->
+	<nav class="navbar navbar-default">
+	      <div id="navbar" class="navbar-collapse collapse">
+	        <ul class="nav navbar-nav">
+	            <li class="active" role="presentation" >
+	                    <a href="/">Sites</a>
+	            </li>
+	            <li role="presentation" >
+	                    <a href="/summary">Summary</a>
+	            </li>
+	        </ul>
+	      </div><!--/.nav-collapse -->
+	</nav>
+    <div class="container"><h1>Site Details - {{sites.site_name}}</h1> 
+	    <table class="table">
+	    	<thead><tr><th>Date</th><th>A Value</th><th>B Value</th></tr></thead>
+		    {% for record in records %}
+				<tr><td>{{record.created_date}}</td><td> {{record.a_record}}</td><td> {{record.b_record}}</td> </tr>
+			{% endfor %}
+		</table>
+	</div>
+{% endblock %}
+
