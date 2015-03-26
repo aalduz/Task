@@ -19,11 +19,12 @@
     	<a href="/summary"><button type="button" class="btn btn-primary active">Sum</button></a>
   		<a href="{% url 'apptask.views.summary_average' %}"><button type="button" class="btn btn-primary">Average</button></a>
 	    <table class="table">
-	    	<thead><tr><th>Site</th><th>A Value</th><th>B Value</th></tr></thead>
+	    	<h1>Testing Summary</h1>
+	    	<!--<thead><tr><th>Site</th><th>A Value</th><th>B Value</th></tr></thead>
 		   	
 			{% for sum in summary %}
 				<tr><td>{{ sum.site }}</td><td> {{ sum.a_record|floatformat:2 }}</td><td> {{ sum.b_record|floatformat:2 }}</td></tr>
-			{% endfor %}
+			{% endfor %} -->
 		</table>
 				  
 	</div>
