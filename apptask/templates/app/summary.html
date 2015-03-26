@@ -22,7 +22,7 @@
 	    	<thead><tr><th>Site</th><th>A Value</th><th>B Value</th></tr></thead>
 		   	
 			{% for sum in summary %}
-				<tr><td>{{ sum.site }}</td><td> {{ sum.a_record|floatformat:2 }}</td><td> {{ sum.b_record|floatformat:2 }}</td></tr>
+				<tr><td>{{ sum.site }}</td><td> {{ sum.a_value|floatformat:2 }}</td><td> {{ sum.b_value|floatformat:2 }}</td></tr>
 			{% endfor %}
 		</table>
 				  
