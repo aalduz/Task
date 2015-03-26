@@ -19,8 +19,8 @@ def site_detail(request, pk):
 
 def summary(request):    
     # Aggregation obtained with raw SQL
-    join = Record.objects.raw('SELECT apptask_record.id, apptask_record.created_date, SUM(apptask_record.a_record) AS a_record, SUM(apptask_record.b_record) AS b_record FROM apptask_record INNER JOIN apptask_site ON (apptask_record.site_id = apptask_site.id) GROUP BY apptask_record.site_id ORDER BY apptask_site.id')
-    
+    #join = Record.objects.raw('SELECT apptask_record.id, apptask_record.created_date, SUM(apptask_record.a_record) AS a_record, SUM(apptask_record.b_record) AS b_record FROM apptask_record INNER JOIN apptask_site ON (apptask_record.site_id = apptask_site.id) GROUP BY apptask_record.site_id ORDER BY apptask_site.id')
+    join=[]
     return render(request, 'app/summary.html', {'summary':join})
 
 def summary_average(request):
